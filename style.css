@@ -1,0 +1,25 @@
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgb(62, 3, 254);
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect: zoom slightly */
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Glow effect in light mode */
+body:not(.dark-mode) .profile-pic {
+    box-shadow: 0 0 15px rgba(177, 7, 234, 0.5); /* soft green glow */
+}
+
+/* Glow effect in dark mode */
+body.dark-mode .profile-pic {
+    box-shadow: 0 0 25px rgba(183, 8, 199, 0.9), 0 0 50px rgba(218, 6, 241, 0.6); /* stronger purple glow */
+}
