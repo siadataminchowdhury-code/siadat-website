@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siadat Amin Chowdhury's First Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header / Home -->
+    <header id="home">
+        <img src="profile.jpg" alt="Siadat Amin Chowdhury" class="profile-pic">
+        <h1>Hi! I’m Siadat Amin Chowdhury 👋</h1>
+        <p>Welcome to my very first website! Here, you can learn a little about me and my hobbies.</p>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a beginner in web development and I love learning new things every day.</p>
+        <p>Some things I like:</p>
+        <ul>
+            <li>Programming & technology</li>
+            <li>Woodworking (I make cool wooden products!)</li>
+            <li>Gaming and fun challenges</li>
+            <li>Spending time with family and friends</li>
+        </ul>
+    </section>
+
+    <!-- Hobbies / Interests -->
+    <section id="hobbies">
+        <h2>Hobbies & Interests</h2>
+        <p>Here are some things I enjoy doing:</p>
+        <ul>
+            <li>Making wooden crafts and small projects</li>
+            <li>Learning to code websites and apps</li>
+            <li>Playing video games or exploring new games</li>
+            <li>Watching YouTube tutorials to improve my skills</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at:</p>
+        <p>Email: <a href="mailto:siadatamin@example.com">siadatamin@example.com</a></p>
+        <p>Or just say hi if you want to talk about coding, games, or cool projects!</p>
+
+        <!-- Simple Contact Form -->
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Siadat Amin Chowdhury. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scroll for navigation links
+        const links = document.querySelectorAll('nav a');
+        for (const link of links) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById('darkModeToggle');
+        toggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')){
+                toggleBtn.textContent = '☀ Light Mode';
+            } else {
+                toggleBtn.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
